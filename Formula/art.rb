@@ -5,28 +5,28 @@
 class Art < Formula
   desc "Argonaut makes DevOps Simple"
   homepage "https://argonaut.dev/"
-  version "0.4.1-beta7"
+  version "0.4.1-beta8"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta7/art_0.4.1-beta7_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "eecdbcb9b0ad300c40cf796476c71a23b993cb636a70c1d94d3f2e66e07812c1"
+      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta8/art_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "2de3a6ac3063f36eff605382b1636005466e284cb9f771ec451244d7f143ff79"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta7/art_0.4.1-beta7_Darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "c54bf65b7e883ac59a79925e916ff918da097d5392030f71661794ffc05cacc4"
+      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta8/art_Darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "1c8bd035ffb21546b0ac9e41318bea25a29885d3ae5436fef3f95098bb228357"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta7/art_0.4.1-beta7_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "81703067afe319544cd8d09f011b68c2162ba9b316221f454c9076df227c4fa7"
+      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta8/art_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "330b30e3c954e328281ac013da470ddf7b70734c03aa63fbcd98588426ba289a"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta7/art_0.4.1-beta7_Linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "6d1d695f7409a9d17f0173ab1f133579b97ea9592dd6dda5117f72341ae64826"
+      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta8/art_Linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "a22efab3b75d65c22135440fede0f9837ec09d8ce9b2382855a4352f2de9cc95"
     end
   end
 
