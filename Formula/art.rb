@@ -5,28 +5,28 @@
 class Art < Formula
   desc "Argonaut makes DevOps Simple"
   homepage "https://argonaut.dev/"
-  version "0.4.1-beta4"
+  version "0.4.1-beta5"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/argonautdev/midgard/releases/download/v0.4.1-beta4/art_0.4.1-beta4_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "7d476ea75d52959af52523bcd3c8768c9fcec06a61c579401b8285849b39fec0"
+      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta5/art_0.4.1-beta5_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "f685cee1ba46552b3ed51bf987420998689b37c79c5af0dcc563b8a6c082677e"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/argonautdev/midgard/releases/download/v0.4.1-beta4/art_0.4.1-beta4_Darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "1fb81df4d93726f80c871686b5c76356b69fe84fe3eba27eb97f14874b2571fa"
+      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta5/art_0.4.1-beta5_Darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "0dc4eaec784bdbab6981bacad038d852d81a7760f1e2cf38ca3d470d9940a29f"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/argonautdev/midgard/releases/download/v0.4.1-beta4/art_0.4.1-beta4_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "165aca16af96e64ac3e9a6c8dcce8e51794c8c552f6e7fcc59b9f3db0513f373"
+      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta5/art_0.4.1-beta5_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "62c235d8d589b700ea3e5a2b0fb92053dd3ccb12000e625e489efefb0ccebee6"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/argonautdev/midgard/releases/download/v0.4.1-beta4/art_0.4.1-beta4_Linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "992ff86eeb58bdd82443edc96034c10f1a1744b6b74b5b79bad1c3b9ab0c325b"
+      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta5/art_0.4.1-beta5_Linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "ac18c6e9dc01dfc84b0d4d2ebbced4a5b9548f097a54810ee2d380ad1f1c9de1"
     end
   end
 
