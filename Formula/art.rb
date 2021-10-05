@@ -5,28 +5,28 @@
 class Art < Formula
   desc "Argonaut makes DevOps Simple"
   homepage "https://argonaut.dev/"
-  version "0.4.1-beta9"
+  version "0.4.1-beta10"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta9/art_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "1cab33053f9f12646c53e31ba1b2b062b86f93e8926b3a7a6d6377a568bc0d34"
+      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta10/art_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "999e98f15b29b9a4d2f5dbb75da6d05540f7d5ae9f9aa39c4a7a9673113de64f"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta9/art_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "ffdc7868ae1fdd23a9c194ebe0644526af43ae4d0e2199f6cb84b6a65177e6b3"
+      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta10/art_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "453321aa7ddcedf30df8f00b7cdd00d1198dcfee4a869d69842abf221de2c326"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta9/art_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "823ccd8472b48ad4e2a85fe9bde5cf63dadbbb050d84a2e524e08a4d3b577885"
+      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta10/art_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "d86c6e4ff106dc6e6bb1014085384e3c1c9b4a365c2ab7941280e4209569bf3c"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta9/art_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "d32b22546836a4169882f5b09890df5bd36ab83f07df5a0ca1d69dff5940df68"
+      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta10/art_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "c1b4ff9db7b436b6cfa888ab4e757a725f2277a76458a395498de17cf583918b"
     end
   end
 
