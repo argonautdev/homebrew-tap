@@ -5,33 +5,30 @@
 class Art < Formula
   desc "Argonaut makes DevOps Simple"
   homepage "https://argonaut.dev/"
-  version "0.4.1-beta8"
+  version "0.4.1-beta9"
   bottle :unneeded
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta8/art_Darwin_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "2de3a6ac3063f36eff605382b1636005466e284cb9f771ec451244d7f143ff79"
+      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta9/art_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "1cab33053f9f12646c53e31ba1b2b062b86f93e8926b3a7a6d6377a568bc0d34"
     end
     if Hardware::CPU.arm?
-      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta8/art_Darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "1c8bd035ffb21546b0ac9e41318bea25a29885d3ae5436fef3f95098bb228357"
+      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta9/art_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "ffdc7868ae1fdd23a9c194ebe0644526af43ae4d0e2199f6cb84b6a65177e6b3"
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta8/art_Linux_x86_64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "330b30e3c954e328281ac013da470ddf7b70734c03aa63fbcd98588426ba289a"
+      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta9/art_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "823ccd8472b48ad4e2a85fe9bde5cf63dadbbb050d84a2e524e08a4d3b577885"
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta8/art_Linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "a22efab3b75d65c22135440fede0f9837ec09d8ce9b2382855a4352f2de9cc95"
+      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta9/art_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "d32b22546836a4169882f5b09890df5bd36ab83f07df5a0ca1d69dff5940df68"
     end
   end
-
-  depends_on "go" => :optional
-  depends_on "git"
 
   def install
     bin.install "art"
