@@ -5,36 +5,56 @@
 class Art < Formula
   desc "Argonaut makes DevOps Simple"
   homepage "https://argonaut.dev/"
-  version "0.4.1-beta10"
-  bottle :unneeded
+  version "0.4.3-alpha5"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta10/art_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "999e98f15b29b9a4d2f5dbb75da6d05540f7d5ae9f9aa39c4a7a9673113de64f"
+      url "https://github.com/argonautdev/public/releases/download/v0.4.3-alpha5/art_darwin_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "a520b3fe9dbfa51543b49c418fd7ce8361a6d42349a6665618366e5d88a5a46f"
+
+      def install
+        bin.install "art"
+        bash_completion.install "completions/art.bash" => "art"
+        zsh_completion.install "completions/art.zsh" => "_art"
+        fish_completion.install "completions/art.fish"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta10/art_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "453321aa7ddcedf30df8f00b7cdd00d1198dcfee4a869d69842abf221de2c326"
+      url "https://github.com/argonautdev/public/releases/download/v0.4.3-alpha5/art_darwin_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "f5ca7d1f6ed682e09d0140b4389867c8d6277eb394d6b83486d657121059cf7d"
+
+      def install
+        bin.install "art"
+        bash_completion.install "completions/art.bash" => "art"
+        zsh_completion.install "completions/art.zsh" => "_art"
+        fish_completion.install "completions/art.fish"
+      end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta10/art_linux_amd64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "d86c6e4ff106dc6e6bb1014085384e3c1c9b4a365c2ab7941280e4209569bf3c"
+      url "https://github.com/argonautdev/public/releases/download/v0.4.3-alpha5/art_linux_amd64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "4d8430e82074d0fd8cefd3938ca55ad997d021f310a0f591a23970ed6c8a3355"
+
+      def install
+        bin.install "art"
+        bash_completion.install "completions/art.bash" => "art"
+        zsh_completion.install "completions/art.zsh" => "_art"
+        fish_completion.install "completions/art.fish"
+      end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/argonautdev/public/releases/download/v0.4.1-beta10/art_linux_arm64.tar.gz", :using => CurlDownloadStrategy
-      sha256 "c1b4ff9db7b436b6cfa888ab4e757a725f2277a76458a395498de17cf583918b"
-    end
-  end
+      url "https://github.com/argonautdev/public/releases/download/v0.4.3-alpha5/art_linux_arm64.tar.gz", :using => CurlDownloadStrategy
+      sha256 "be35ea8e038f306823ff7dfe14fa94a1d66e343f654694b2908c9eb6d5664b2d"
 
-  def install
-    bin.install "art"
-    bash_completion.install "completions/art.bash" => "art"
-    zsh_completion.install "completions/art.zsh" => "_art"
-    fish_completion.install "completions/art.fish"
+      def install
+        bin.install "art"
+        bash_completion.install "completions/art.bash" => "art"
+        zsh_completion.install "completions/art.zsh" => "_art"
+        fish_completion.install "completions/art.fish"
+      end
+    end
   end
 
   test do
