@@ -8,9 +8,9 @@ class Art < Formula
   version "0.13.4"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/argonautdev/public/releases/download/v0.13.4/art_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "0c6524dc8a1eca71cab1ed13d46e2e691eb43d8d94627d4e9b8287b577a639a3"
+    if Hardware::CPU.intel?
+      url "https://github.com/argonautdev/public/releases/download/v0.13.4/art_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "7e0b9f8c6c6ee56c1451e01ebf2b56819479c6a08f0e6a095ca6d9265753446c"
 
       def install
         bin.install "art"
@@ -19,9 +19,9 @@ class Art < Formula
         fish_completion.install "completions/art.fish"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/argonautdev/public/releases/download/v0.13.4/art_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "a5b3179ca668ba185b69245d8ca7e9572f3749887d5da97886c0055b1a2b1d1a"
+    if Hardware::CPU.arm?
+      url "https://github.com/argonautdev/public/releases/download/v0.13.4/art_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "a948a47b5d7b758f2876dbfab1806513625e8e2f13f03744af5e1f3d8698f52a"
 
       def install
         bin.install "art"
@@ -35,7 +35,7 @@ class Art < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/argonautdev/public/releases/download/v0.13.4/art_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "515654e94b317d1fdf47ec2452bf40a034812111f8667f4218e07cf9d11587ae"
+      sha256 "5bc68a051e2b3b1fc87563882cded5caa31a39da46be210d4e14aab79f6f1a1b"
 
       def install
         bin.install "art"
@@ -46,7 +46,7 @@ class Art < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/argonautdev/public/releases/download/v0.13.4/art_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "9ba4e68cb2371044bca05e7a14ec50038c48d5dbb8fca0cf688d19692a3068bf"
+      sha256 "ba8b35e40a58b6e675bdeb9f170d588aadcfaa042958551353ce359aa7d39fc9"
 
       def install
         bin.install "art"
