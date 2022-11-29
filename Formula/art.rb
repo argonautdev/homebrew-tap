@@ -10,7 +10,7 @@ class Art < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/argonautdev/public/releases/download/v0.13.4/art_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "7e0b9f8c6c6ee56c1451e01ebf2b56819479c6a08f0e6a095ca6d9265753446c"
+      sha256 "6161d69709ad381a9e7f19e7e05b1e137589fdc563035fd2e2985e2f1a3cce66"
 
       def install
         bin.install "art"
@@ -21,7 +21,7 @@ class Art < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/argonautdev/public/releases/download/v0.13.4/art_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "a948a47b5d7b758f2876dbfab1806513625e8e2f13f03744af5e1f3d8698f52a"
+      sha256 "698efb8a08d2addc2b6c0161d33359775fa68c85522e1baefd9a5a9278a7d4ac"
 
       def install
         bin.install "art"
@@ -35,7 +35,7 @@ class Art < Formula
   on_linux do
     if Hardware::CPU.intel?
       url "https://github.com/argonautdev/public/releases/download/v0.13.4/art_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "5bc68a051e2b3b1fc87563882cded5caa31a39da46be210d4e14aab79f6f1a1b"
+      sha256 "0dfcae7e930d30be5f3e4e101fb1481917319d2e114da27b0a709d541737e7af"
 
       def install
         bin.install "art"
@@ -46,7 +46,7 @@ class Art < Formula
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/argonautdev/public/releases/download/v0.13.4/art_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "ba8b35e40a58b6e675bdeb9f170d588aadcfaa042958551353ce359aa7d39fc9"
+      sha256 "b3ca3e2449ecadb8dff9f0740ff9de84ee0df3f1813b68f0ee5684397ade0247"
 
       def install
         bin.install "art"
