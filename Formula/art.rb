@@ -5,12 +5,12 @@
 class Art < Formula
   desc "Argonaut makes DevOps Simple"
   homepage "https://argonaut.dev/"
-  version "0.14.3"
+  version "0.14.4"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/argonautdev/public/releases/download/v0.14.3/art_darwin_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "b70ef73d14d9f01d3df46d1b14dfda02e15a94512e8aab3a66c40021d8ddd57f"
+    if Hardware::CPU.arm?
+      url "https://github.com/argonautdev/public/releases/download/v0.14.4/art_darwin_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "8b885543d4c2614e026cabdd1958357937060e3b484df1d32e5fb1953dbee895"
 
       def install
         bin.install "art"
@@ -19,9 +19,9 @@ class Art < Formula
         fish_completion.install "completions/art.fish"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/argonautdev/public/releases/download/v0.14.3/art_darwin_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "a72ed0330010b95284b00b440e88b55b3fc5d361e05484e9f878f621cf4ec8de"
+    if Hardware::CPU.intel?
+      url "https://github.com/argonautdev/public/releases/download/v0.14.4/art_darwin_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "326bd931d1119fedf863a4fe45cf351a392a38c9616813efa2258526b03bc0cf"
 
       def install
         bin.install "art"
@@ -34,8 +34,8 @@ class Art < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/argonautdev/public/releases/download/v0.14.3/art_linux_arm64.tar.gz", using: CurlDownloadStrategy
-      sha256 "86ca7c99c607a45930c085cc903c24869fff792e728a655d639514557e912f1a"
+      url "https://github.com/argonautdev/public/releases/download/v0.14.4/art_linux_arm64.tar.gz", using: CurlDownloadStrategy
+      sha256 "6927765da7ba69d9efaf9efbe6824488e9d219abe1c7bfdc34ae6602f80fc6ce"
 
       def install
         bin.install "art"
@@ -45,8 +45,8 @@ class Art < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/argonautdev/public/releases/download/v0.14.3/art_linux_amd64.tar.gz", using: CurlDownloadStrategy
-      sha256 "db8b6010a43b417387371e0ec6a2fe18a3412f68be7f1419405ca7c05ed05380"
+      url "https://github.com/argonautdev/public/releases/download/v0.14.4/art_linux_amd64.tar.gz", using: CurlDownloadStrategy
+      sha256 "ebc8f709a9ca9bf6dddc1c30f651fa96abea0fef621375f03e827794846cc484"
 
       def install
         bin.install "art"
